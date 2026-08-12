@@ -40,18 +40,18 @@ export const WhyChooseUs: React.FC = () => {
           </div>
 
           <h2
-            className="font-semibold text-[#212529] tracking-tight mb-4 max-w-3xl mx-auto"
-            style={{ fontSize: '42px', lineHeight: '52px' }}
+            className="font-semibold tracking-tight mb-4 max-w-3xl mx-auto"
+            style={{ fontSize: '42px', lineHeight: '52px', color: 'var(--color-text-primary)' }}
           >
             We Don't Just Deliver Work.{' '}
-            <span className="text-[#0067b8]">We Become Part of Your Business.</span>
+            <span className="link-blue">We Become Part of Your Business.</span>
           </h2>
 
-          <p className="text-[15px] text-[#212529] leading-[26px] max-w-3xl mx-auto">
+          <p className="text-[15px] body-base leading-[26px] max-w-3xl mx-auto">
             When businesses work with Svayam Incarnation, they don't get a vendor. They get a dedicated
-            cross-functional team of <strong className="text-[#212529]">10+ specialists</strong> — developers, designers,
+            cross-functional team of <strong style={{color: 'var(--color-text-primary)'}}>10+ specialists</strong> — developers, designers,
             marketers, consultants, and legal professionals — all working together with one shared goal:{' '}
-            <strong className="text-[#212529]">your sustainable growth.</strong>
+            <strong style={{color: 'var(--color-text-primary)'}}>your sustainable growth.</strong>
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export const WhyChooseUs: React.FC = () => {
                 alt="Svayam multidisciplinary team collaborating on a client project"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                className="object-cover object-center"
                 priority={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
@@ -106,13 +106,13 @@ export const WhyChooseUs: React.FC = () => {
                   <div className="w-8 h-8 rounded-[6px] bg-[#f0f7ff] border border-[#cce5ff] text-[#535353] flex items-center justify-center shadow-2xs shrink-0">
                     {getIcon(item.iconName)}
                   </div>
-                  <h3 className="text-[15px] font-semibold text-[#212529] leading-tight">
+                  <h3 className="heading-sm text-[15px] font-semibold leading-tight">
                     {item.title}
                   </h3>
                 </div>
 
                 {/* Description Paragraph */}
-                <p className="text-[12.8px] text-[#555555] leading-[20px] relative z-10 pr-8">
+                <p className="body-sm text-[12.8px] leading-[20px] relative z-10 pr-8">
                   {item.description}
                 </p>
               </div>
@@ -135,7 +135,7 @@ export const WhyChooseUs: React.FC = () => {
                 <div className="w-8 h-8 rounded-[6px] bg-[#f0f7ff] border border-[#cce5ff] flex items-center justify-center shrink-0">
                   <Icon className="w-4 h-4 text-[#0067b8]" aria-hidden="true" />
                 </div>
-                <span className="text-[12.5px] font-semibold text-[#212529] leading-tight">{label}</span>
+                <span className="text-[12.5px] font-semibold leading-tight" style={{color: 'var(--color-text-primary)'}}>{label}</span>
               </div>
             ))}
           </div>

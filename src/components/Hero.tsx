@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = () => {
         <div className="w-full max-w-[1400px] mx-auto">
           {/* Framed Hero Image Container */}
           <div
-            className="relative rounded-[8px] sm:rounded-[12px] overflow-hidden bg-cover bg-center bg-no-repeat min-h-[550px] lg:min-h-[550px] pl-6 sm:pl-10 lg:pl-[64px] pr-6 sm:pr-8 lg:pr-8 py-6 sm:py-8 flex items-center border border-[#e5e7eb]"
+            className="relative rounded-[8px] sm:rounded-[12px] overflow-hidden bg-cover bg-center bg-no-repeat min-h-[540px] lg:min-h-[540px] pl-6 sm:pl-10 lg:pl-[64px] pr-6 sm:pr-8 lg:pr-8 py-6 sm:py-8 flex items-center border border-[#e5e7eb]"
             style={{
               backgroundImage: "url('/busi-hero.jpg')",
               backgroundPosition: "center",
@@ -52,27 +52,19 @@ export const Hero: React.FC<HeroProps> = () => {
                   {/* 2. Main Headline Strictly in Exactly Two Lines */}
                   <h1 className="font-bold tracking-tight mb-4 drop-shadow-md">
                     <span
-                      className="block pt-1 pb-1 whitespace-nowrap"
+                      className="text-gradient-brand block pt-1 pb-1 whitespace-nowrap"
                       style={{
                         fontSize: "clamp(28px, 3.2vw, 42px)",
                         lineHeight: "1.25",
-                        background:
-                          "linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
                       }}
                     >
                       Build Your Business.
                     </span>
                     <span
-                      className="block pt-1 pb-1 whitespace-nowrap"
+                      className="text-gradient-brand block pt-1 pb-1 whitespace-nowrap"
                       style={{
                         fontSize: "clamp(26px, 2.9vw, 42px)",
                         lineHeight: "1.25",
-                        background:
-                          "linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
                       }}
                     >
                       We’ll Handle Everything Else.

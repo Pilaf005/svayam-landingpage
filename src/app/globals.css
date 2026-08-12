@@ -18,10 +18,18 @@
   --font-size-4xl: 18px;
 
   /* Color Palette Tokens */
-  --color-text-primary: #212529;
+  --color-text-primary: #131313; /* updated: matches new.css primary text */
   --color-text-secondary: #999999;
   --color-text-tertiary: #ffffff;
   --color-text-inverse: #414141;
+
+  /* new.css extracted text color tokens */
+  --color-text-dark: #333333;           /* dark secondary — card titles, widget headings */
+  --color-text-mid: #666666;            /* medium gray — modal forms, dropdown items */
+  --color-text-link: #0067b8;           /* brand blue link text */
+  --color-text-success-alt: #13bf7b;    /* active nav, success indicators */
+  --color-text-soft: rgba(0, 0, 0, 0.54); /* subtle body copy, metadata */
+  --color-text-error: #f60000;          /* error messages */
 
   --color-surface-base: #000000;
   --color-surface-muted: #333333;
@@ -113,14 +121,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Universal Lucide Icon Default Color (excluding white button icons) */
-svg.lucide:not(.fill-white):not(.text-white) {
-  color: #535353;
-}
-
-svg.fill-white, svg.text-white {
-  color: #ffffff;
-  fill: #ffffff;
+/* Universal Lucide Icon Default Color (inherits text color by default) */
+svg.lucide {
+  color: currentColor;
 }
 
 /* Headings scale with typography tokens */
@@ -287,4 +290,239 @@ svg.fill-white, svg.text-white {
 
 .skip-link:focus {
   top: 0;
+}
+
+/* ==========================================================
+   TEXT STYLES EXTRACTED FROM new.css
+   ========================================================== */
+
+
+/* --- CATEGORY 1: Base Typography Resets (new.css lines 109-136) --- */
+
+h1, h2, h3, h4, h5, h6, p {
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* text-transform: capitalize removed — causes unwanted capitalization of prepositions/conjunctions */
+}
+
+strong {
+  font-family: Arial, sans-serif;
+}
+
+.text-error {
+  color: var(--color-text-error); /* #f60000 */
+}
+
+
+/* --- CATEGORY 2: Heading Scale (new.css lines 1812-1853, 4271-4293, 6519-6594) --- */
+
+/* Hero / page-level large heading */
+.heading-xl {
+  font-size: 41px;
+  font-weight: 100;
+  line-height: 1.4;
+  color: var(--color-text-dark); /* #333 */
+}
+
+/* Section headings */
+.heading-lg {
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 1.5;
+  color: var(--color-text-dark); /* #333 */
+}
+
+/* Card / sub-section headings */
+.heading-md {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--color-text-primary); /* #131313 */
+}
+
+/* Small label headings */
+.heading-sm {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text-primary); /* #131313 */
+}
+
+
+/* --- CATEGORY 3: Paragraph & Body Copy (new.css lines 4565-4572, 5538-5545, 5910-5916) --- */
+
+/* Large body — hero section intros */
+.body-lg {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text-soft); /* rgba(0,0,0,0.54) */
+}
+
+/* Base body — card descriptions */
+.body-base {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-dark); /* #333 */
+}
+
+/* Small body — secondary info, metadata */
+.body-sm {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-text-mid); /* #666 */
+  letter-spacing: 0.01428571em;
+}
+
+/* Caption / fine print */
+.body-xs {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-text-mid); /* #666 */
+}
+
+/* Muted / disabled text */
+.text-muted-new {
+  color: var(--color-text-secondary); /* #999 */
+}
+
+
+/* --- CATEGORY 4: Brand Gradient Text (new.css lines 181-198, .text-high) --- */
+
+.text-gradient-brand {
+  display: inline-block;
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #2ca2b4,
+    #5598de 24%,
+    #7f87ff 45%,
+    #f65aad 76%,
+    #ec3d43
+  );
+  will-change: transform;
+  overflow: hidden;
+}
+
+
+/* --- CATEGORY 5: Link & Anchor Colors (new.css lines 100-103, 1758-1770, 5631-5637) --- */
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+/* Blue link — footer, inline text, legal */
+.link-blue {
+  color: var(--color-text-link); /* #0067b8 */
+  text-decoration: none;
+}
+/* Only underline on hover when it's an actual anchor tag, not a span in a heading */
+a.link-blue:hover {
+  text-decoration: underline;
+}
+
+/* Active / highlighted nav state */
+.link-active {
+  color: var(--color-text-success-alt); /* #13bf7b */
+}
+
+/* Learn more anchor with animated underline */
+.link-learn-more {
+  color: var(--color-text-link);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 9px 1px;
+  display: inline-block;
+}
+.link-learn-more:hover {
+  border-bottom: 2px solid #000;
+}
+
+/* White link — used on dark backgrounds (Hero, CTA) */
+.link-white {
+  color: var(--color-text-tertiary) !important; /* #fff */
+  text-decoration: none !important;
+}
+.link-white:hover {
+  text-decoration: underline !important;
+}
+
+
+/* --- CATEGORY 6: Eyebrow / Label / Announcement Text (new.css lines 22148-22209) --- */
+
+/* Uppercase label above section headings */
+.text-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-link); /* #0067b8 */
+}
+
+/* Announcement / banner description */
+.text-bannerdesc {
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: var(--color-text-tertiary); /* #fff */
+  margin-bottom: 0;
+}
+
+/* Large intro label (hero, CTA banners) */
+.text-intro-label {
+  font-size: 120%;
+  color: var(--color-text-tertiary); /* #fff on dark bg */
+}
+
+/* Section title — header_title pattern */
+.text-header-title {
+  font-size: 55px;
+  color: var(--color-text-tertiary);
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.133333;
+}
+
+/* Section subtitle */
+.text-header-subtitle {
+  font-size: 20px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+/* --- CATEGORY 7: Page Load & Text Entrance Animations (new.css lines 138-161, 1714-1737) --- */
+
+@keyframes body_fade {
+  0%   { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+body {
+  animation: body_fade 1s ease;
+}
+
+@keyframes text_anim {
+  0%   { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Apply to any text element for slide-in entrance */
+.animate-text-in {
+  animation: text_anim 0.6s ease forwards;
+  opacity: 0;
+}
+
+
+/* --- CATEGORY 8: Text Selection Color (new.css lines 212-215) --- */
+
+::selection {
+  background-color: #ffd400;
+  color: #000;
 }

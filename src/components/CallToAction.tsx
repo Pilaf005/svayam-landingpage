@@ -40,7 +40,7 @@ export const CallToAction: React.FC<CallToActionProps> = ({ onOpenConsultation }
                 alt="Svayam senior business consultant discussing strategy with client"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                className="object-cover object-center"
                 priority={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
@@ -69,17 +69,17 @@ export const CallToAction: React.FC<CallToActionProps> = ({ onOpenConsultation }
 
               {/* Headline */}
               <h2
-                className="font-semibold text-[#212529] tracking-tight mb-3"
-                style={{ fontSize: '38px', lineHeight: '48px' }}
+                className="font-semibold tracking-tight mb-3"
+                style={{ fontSize: '38px', lineHeight: '48px', color: 'var(--color-text-primary)' }}
               >
                 Ready to Stop Managing Vendors{' '}
-                <span className="text-[#0067b8]">and Start Actually Growing?</span>
+                <span className="link-blue">and Start Actually Growing?</span>
               </h2>
 
-              <p className="text-[15px] text-[#212529] leading-[25px] mb-5">
-                We limit intake to <strong className="text-[#212529]">4 new client partnerships per month</strong> —
+              <p className="text-[15px] body-base leading-[25px] mb-5">
+                We limit intake to <strong style={{color: 'var(--color-text-primary)'}}>4 new client partnerships per month</strong> —
                 so every business gets our complete focus and our very best work.{' '}
-                <span className="text-[#0067b8] font-semibold">Spots fill fast.</span>
+                <span className="link-blue font-semibold">Spots fill fast.</span>
               </p>
 
               {/* Trust Badges Row */}
@@ -93,8 +93,8 @@ export const CallToAction: React.FC<CallToActionProps> = ({ onOpenConsultation }
                       <Icon className="w-3.5 h-3.5 text-[#0067b8]" aria-hidden="true" />
                     </div>
                     <div>
-                      <div className="text-[12px] font-bold text-[#212529] leading-tight">{title}</div>
-                      <div className="text-[10.5px] text-[#777777] mt-0.5">{subtitle}</div>
+                      <div className="text-[12px] font-bold leading-tight" style={{color: 'var(--color-text-primary)'}}>{title}</div>
+                      <div className="body-xs text-[10.5px] mt-0.5">{subtitle}</div>
                     </div>
                   </div>
                 ))}
@@ -124,8 +124,8 @@ export const CallToAction: React.FC<CallToActionProps> = ({ onOpenConsultation }
               </div>
 
               {/* Social Proof Micro-line */}
-              <p className="text-[11.5px] text-[#888888]">
-                Trusted by <span className="font-semibold text-[#414141]">50+ businesses</span> across 9 industries.
+              <p className="text-[11.5px] text-muted-new">
+                Trusted by <span className="font-semibold" style={{color: 'var(--color-text-inverse)'}}>50+ businesses</span> across 9 industries.
               </p>
             </div>
 

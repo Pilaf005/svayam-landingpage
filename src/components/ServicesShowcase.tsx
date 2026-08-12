@@ -82,32 +82,33 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onSelectServ
 
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-10">
-          <div className="pill-token mb-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f8f9fa] border border-[#e5e7eb] text-[12px] font-semibold text-[#212529]">
+          <div className="pill-token mb-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f8f9fa] border border-[#e5e7eb] text-[12px] font-semibold" style={{color: 'var(--color-text-primary)'}}>
             <Sparkles className="w-3.5 h-3.5 text-[#535353]" aria-hidden="true" />
             <span>What We Do For You</span>
           </div>
 
           <h2
-            className="font-semibold text-[#212529] tracking-tight mb-4 max-w-4xl mx-auto"
-            style={{ fontSize: '42px', lineHeight: '52px' }}
+            className="font-semibold tracking-tight mb-4 max-w-4xl mx-auto"
+            style={{ fontSize: '42px', lineHeight: '52px', color: 'var(--color-text-primary)' }}
           >
             10+ Capabilities. One Unified Team.{' '}
-            <span className="text-[#0067b8]">Stop Explaining Your Vision to Different Vendors.</span>
+            <span className="link-blue">Stop Explaining Your Vision to Different Vendors.</span>
           </h2>
 
-          <p className="text-[15px] text-[#212529] leading-[26px] max-w-3xl mx-auto">
+          <p className="text-[15px] body-base leading-[26px] max-w-3xl mx-auto">
             From technology and marketing to legal support and AI automation — one synchronized team handles everything your business needs.
-            You stay focused on growth. <strong className="text-[#212529]">We handle the rest.</strong>
+            You stay focused on growth. <strong style={{color: 'var(--color-text-primary)'}}>We handle the rest.</strong>
           </p>
         </div>
 
         {/* ── Audience Badge Strip ── */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
-          <span className="text-[11px] font-bold text-[#999999] uppercase tracking-widest mr-1">Built For:</span>
+          <span className="text-[11px] font-bold text-muted-new uppercase tracking-widest mr-1">Built For:</span>
           {AUDIENCE_BADGES.map(({ label, icon: Icon }) => (
             <span
               key={label}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#e5e7eb] text-[12px] font-medium text-[#212529] hover:border-[#0067b8] hover:text-[#0067b8] transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#e5e7eb] text-[12px] font-medium hover:border-[#0067b8] hover:text-[#0067b8] transition-colors"
+              style={{color: 'var(--color-text-primary)'}}
             >
               <Icon className="w-3.5 h-3.5" aria-hidden="true" />
               {label}
@@ -126,8 +127,9 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onSelectServ
               className={`px-[12px] py-[7px] rounded-full text-[12px] font-semibold transition-all duration-150 cursor-pointer ${
                 activeCategory === cat.id
                   ? 'bg-[#0067b8] text-white shadow-sm'
-                  : 'bg-white text-[#212529] hover:bg-[#e5e7eb] border border-[#e5e7eb]'
+                  : 'bg-white hover:bg-[#e5e7eb] border border-[#e5e7eb]'
               }`}
+              style={activeCategory !== cat.id ? {color: 'var(--color-text-primary)'} : {}}
             >
               {cat.label}
             </button>
@@ -166,18 +168,18 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onSelectServ
                       <div className="w-9 h-9 rounded-[8px] bg-[#f0f7ff] border border-[#cce5ff] text-[#535353] flex items-center justify-center shadow-2xs shrink-0">
                         {getServiceIcon(service.iconName)}
                       </div>
-                      <h3 className="text-[17px] font-semibold text-[#212529] leading-tight">
+                      <h3 className="heading-md text-[17px] font-semibold leading-tight">
                         {service.title}
                       </h3>
                     </div>
 
-                    <p className="text-[11px] font-semibold text-[#0067b8] uppercase tracking-wider mb-2.5">{service.subtitle}</p>
-                    <p className="text-[12.8px] text-[#555555] leading-[20px] mb-4">{service.description}</p>
+                    <p className="text-[11px] font-semibold text-eyebrow uppercase tracking-wider mb-2.5">{service.subtitle}</p>
+                    <p className="body-sm text-[12.8px] leading-[20px] mb-4">{service.description}</p>
 
                     {/* Streamlined Capabilities */}
                     <ul className="space-y-[7px] pt-3 border-t border-[#e5e7eb]" aria-label={`${service.title} Features`}>
                       {displayedFeatures.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-[12.2px] text-[#212529]">
+                        <li key={idx} className="flex items-start gap-2 text-[12.2px]" style={{color: 'var(--color-text-primary)'}}>
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#535353] shrink-0 mt-0.5" aria-hidden="true" />
                           <span className="leading-snug">{feature}</span>
                         </li>

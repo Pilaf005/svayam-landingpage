@@ -94,14 +94,14 @@ export const ProcessRoadmap: React.FC = () => {
           </div>
 
           <h2
-            className="font-semibold text-[#212529] tracking-tight mb-4 max-w-3xl mx-auto"
-            style={{ fontSize: '42px', lineHeight: '52px' }}
+            className="font-semibold tracking-tight mb-4 max-w-3xl mx-auto"
+            style={{ fontSize: '42px', lineHeight: '52px', color: 'var(--color-text-primary)' }}
           >
             From First Call to Full Growth.{' '}
-            <span className="text-[#0067b8] block sm:inline">Here's Exactly How We Work.</span>
+            <span className="link-blue block sm:inline">Here's Exactly How We Work.</span>
           </h2>
 
-          <p className="text-[15px] text-[#212529] leading-[26px] max-w-2xl mx-auto">
+          <p className="text-[15px] body-base leading-[26px] max-w-2xl mx-auto">
             No black boxes. No mystery. You always know what's happening, what's next, and who's
             responsible. Here's our structured 6-phase process — with clear timelines at every step.
           </p>
@@ -131,7 +131,7 @@ export const ProcessRoadmap: React.FC = () => {
                       <div className="w-9 h-9 rounded-[8px] bg-[#f0f7ff] border border-[#cce5ff] text-[#535353] flex items-center justify-center shadow-2xs shrink-0">
                         {getStepIcon(step.iconName)}
                       </div>
-                      <h3 className="text-[17px] font-semibold text-[#212529] leading-tight">{step.title}</h3>
+                      <h3 className="heading-md text-[17px] font-semibold leading-tight">{step.title}</h3>
                     </div>
 
                     <span className="text-[11px] font-bold text-[#0067b8] uppercase tracking-wider shrink-0 bg-[#f0f7ff] px-2.5 py-1 rounded-full border border-[#cce5ff]">
@@ -139,7 +139,7 @@ export const ProcessRoadmap: React.FC = () => {
                     </span>
                   </div>
 
-                  <p className="text-[13px] text-[#555555] leading-[20px] mb-5">{step.description}</p>
+                  <p className="body-sm text-[13px] leading-[20px] mb-5">{step.description}</p>
                 </div>
 
                 {/* Deliverables */}
@@ -149,7 +149,7 @@ export const ProcessRoadmap: React.FC = () => {
                   </div>
                   <ul className="space-y-1.5" aria-label={`${step.title} Outcomes`}>
                     {step.deliverables.map((item, dIdx) => (
-                      <li key={dIdx} className="flex items-start gap-2 text-[12px] text-[#212529]">
+                      <li key={dIdx} className="flex items-start gap-2 text-[12px]" style={{color: 'var(--color-text-primary)'}}>
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#535353] shrink-0 mt-0.5" aria-hidden="true" />
                         <span className="leading-snug">{item}</span>
                       </li>

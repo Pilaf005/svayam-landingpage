@@ -15,10 +15,10 @@ export const StatsBanner: React.FC = () => {
                 idx !== 0 ? 'pt-4 md:pt-0' : ''
               }`}
             >
-              <div className="text-[26px] sm:text-[32px] font-bold text-[#212529] tracking-tight leading-none mb-1.5">
+              <div className="text-[26px] sm:text-[32px] font-bold tracking-tight leading-none mb-1.5" style={{color: 'var(--color-text-primary)'}}>
                 {stat.value}
               </div>
-              <div className="text-[12.5px] sm:text-[13.5px] font-medium text-[#555555] leading-snug">
+              <div className="body-sm text-[12.5px] sm:text-[13.5px] font-medium leading-snug">
                 {stat.label}
               </div>
             </div>

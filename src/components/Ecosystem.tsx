@@ -56,14 +56,14 @@ export const Ecosystem: React.FC = () => {
           </div>
 
           <h2
-            className="section-heading-42 font-bold text-[#212529] tracking-tight mb-3"
-            style={{ fontSize: '42px', lineHeight: '52px' }}
+            className="section-heading-42 font-bold tracking-tight mb-3"
+            style={{ fontSize: '42px', lineHeight: '52px', color: 'var(--color-text-primary)' }}
           >
             Everything Your Business Needs.{' '}
-            <span className="text-[#0067b8]">One Trusted Partner.</span>
+            <span className="link-blue">One Trusted Partner.</span>
           </h2>
 
-          <p className="text-[13px] sm:text-[14px] text-[#414141] leading-[21px]">
+          <p className="body-sm text-[13px] sm:text-[14px] leading-[21px]">
             At Svayam Incarnation, we’ve built an ecosystem of professionals who collaborate daily —
             eliminating the complexity of managing multi-agency dependencies.
           </p>
@@ -88,18 +88,18 @@ export const Ecosystem: React.FC = () => {
                   <div className="p-2 rounded-[3px] bg-[#0067b8] text-white">
                     {getIcon(member.iconName)}
                   </div>
-                  <span className="text-[10.24px] font-semibold text-[#999999] uppercase tracking-wider">
+                  <span className="text-[10.24px] font-semibold text-color-muted uppercase tracking-wider">
                     Pod
                   </span>
                 </div>
 
-                <h4 className="text-[14px] font-bold text-[#212529] mb-[2px]">
+                <h4 className="heading-sm text-[14px] font-bold mb-[2px]">
                   {member.title}
                 </h4>
                 <div className="text-[12px] font-medium text-[#0067b8] mb-1">
                   {member.role}
                 </div>
-                <p className="text-[11px] text-[#414141] leading-[16px]">
+                <p className="body-xs text-[11px] leading-[16px]">
                   {member.specialty}
                 </p>
               </div>
@@ -109,7 +109,7 @@ export const Ecosystem: React.FC = () => {
 
         {/* Bottom Banner */}
         <div className="p-6 rounded-[7px] bg-[#f8f9fa] border border-[#e5e7eb] text-center max-w-2xl mx-auto">
-          <p className="text-[13px] text-[#212529] mb-2">
+          <p className="body-base text-[13px] mb-2">
             Instead of managing different vendors for every requirement, you gain access to one
             collaborative team that shares the same vision — <strong>your success.</strong>
           </p>

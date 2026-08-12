@@ -24,15 +24,15 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onOpenConsulta
 
           {/* Heading with Line 1 strictly in a single row */}
           <h2
-            className="section-heading-42 font-semibold text-[#212529] tracking-tight mb-4 max-w-5xl mx-auto"
-            style={{ fontSize: '42px', lineHeight: '52px' }}
+            className="section-heading-42 font-semibold tracking-tight mb-4 max-w-5xl mx-auto"
+            style={{ fontSize: '42px', lineHeight: '52px', color: 'var(--color-text-primary)' }}
           >
             <span className="block whitespace-normal lg:whitespace-nowrap">Growing Businesses Don't Need More Vendors.</span>
-            <span className="block text-[#0067b8]">They Need Better Collaboration.</span>
+            <span className="block link-blue">They Need Better Collaboration.</span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-[16px] text-[#212529] leading-[26px] mb-8 max-w-3xl mx-auto">
+          <p className="text-[16px] body-base leading-[26px] mb-8 max-w-3xl mx-auto">
             You hired the right people. You're paying good money. Yet progress is still painfully slow.
             That's not a talent problem — it's a coordination problem quietly costing you momentum every day.
           </p>
@@ -43,9 +43,9 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onOpenConsulta
               <Quote className="w-5 h-5 text-[#535353]" aria-hidden="true" />
             </div>
             <div className="space-y-1">
-              <p className="text-[15px] sm:text-[16px] font-medium text-[#212529] leading-relaxed italic">
+              <p className="text-[15px] sm:text-[16px] font-medium leading-relaxed italic" style={{color: 'var(--color-text-primary)'}}>
                 "Everyone is busy. Nothing gets done. Not because people aren't working —
-                <span className="text-[#0067b8] not-italic font-bold"> but because nobody is working together."</span>
+                <span className="link-blue not-italic font-bold"> but because nobody is working together."</span>
               </p>
             </div>
           </div>
@@ -64,10 +64,10 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onOpenConsulta
                     <XCircle className="w-5 h-5 text-[#333333]" aria-hidden="true" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-bold text-[#555555] uppercase tracking-wider block">
+                    <span className="text-[11px] font-bold text-muted-new uppercase tracking-wider block">
                       The Old Way
                     </span>
-                    <h3 className="text-[16px] font-semibold text-[#333333]">
+                    <h3 className="heading-sm text-[16px] font-semibold" style={{color: 'var(--color-text-dark)'}}>
                       Fragmented Multi-Vendor Trap
                     </h3>
                   </div>
@@ -81,7 +81,7 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onOpenConsulta
                       className="bg-white rounded-[10px] p-4 border border-[#e5e7eb] flex items-start gap-3 shadow-2xs"
                     >
                       <XCircle className="w-4 h-4 text-[#535353] shrink-0 mt-0.5" aria-hidden="true" />
-                      <p className="text-[13.5px] text-[#333333] leading-[21px]">
+                      <p className="body-sm text-[13.5px] leading-[21px]">
                         {point.vendorPain}
                       </p>
                     </div>
@@ -91,7 +91,7 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onOpenConsulta
 
               {/* Bottom Status */}
               <div className="mt-6 pt-4 border-t border-[#e5e7eb] text-center">
-                <span className="text-[11px] font-bold text-[#555555] uppercase tracking-wider">
+                <span className="text-[11px] font-bold text-muted-new uppercase tracking-wider">
                   Result: High Overhead · Slow Execution · Fragmented Accountability
                 </span>
               </div>
@@ -111,10 +111,10 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onOpenConsulta
                     <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-bold text-[#0067b8] uppercase tracking-wider block">
+                    <span className="text-[11px] font-bold text-eyebrow uppercase tracking-wider block">
                       The Modern Way
                     </span>
-                    <h3 className="text-[16px] font-semibold text-[#212529]">
+                    <h3 className="heading-sm text-[16px] font-semibold" style={{color: 'var(--color-text-primary)'}}>
                       The Svayam Unified Model
                     </h3>
                   </div>
@@ -128,7 +128,7 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onOpenConsulta
                       className="bg-white rounded-[10px] p-4 border border-[#cce5ff] flex items-start gap-3 shadow-2xs group-hover:border-[#0067b8]/40 transition-colors"
                     >
                       <CheckCircle2 className="w-4 h-4 text-[#107c41] shrink-0 mt-0.5" aria-hidden="true" />
-                      <p className="text-[13.5px] font-medium text-[#212529] leading-[21px]">
+                      <p className="body-sm text-[13.5px] font-medium leading-[21px]">
                         {point.svayamGain}
                       </p>
                     </div>
