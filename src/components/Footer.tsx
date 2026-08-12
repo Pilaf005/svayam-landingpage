@@ -3,7 +3,11 @@
 import React from 'react';
 import { FOOTER_SECTIONS } from '@/data/content';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenConsultation: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
   return (
     <footer className="bg-white text-[#131313] pt-14 pb-10 border-t border-[#e5e7eb]">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
