@@ -46,21 +46,18 @@ export const Ecosystem: React.FC = () => {
   };
 
   return (
-    <section id="ecosystem" className="py-16 bg-white text-[#212529] border-b border-[#e5e7eb]">
+    <section id="ecosystem" className="py-12 sm:py-16 lg:py-20 bg-white text-[#212529] border-b border-[#e5e7eb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-5xl mx-auto mb-12">
+        <div className="text-center max-w-5xl mx-auto mb-8 sm:mb-12">
           <div className="pill-token mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#0067b8]" aria-hidden="true" />
             <span>Our Ecosystem</span>
           </div>
 
-          <h2
-            className="section-heading-42 font-bold tracking-tight mb-3"
-            style={{ fontSize: '42px', lineHeight: '52px', color: 'var(--color-text-primary)' }}
-          >
+          <h2 className="section-heading-42 font-bold tracking-tight mb-3 text-[#131313]">
             Everything Your Business Needs.{' '}
-            <span className="link-blue">One Trusted Partner.</span>
+            <span className="link-blue block sm:inline">One Trusted Partner.</span>
           </h2>
 
           <p className="body-sm text-[13px] sm:text-[14px] leading-[21px]">
@@ -69,8 +66,8 @@ export const Ecosystem: React.FC = () => {
           </p>
         </div>
 
-        {/* 10-Role Ecosystem Matrix */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-8">
+        {/* 10-Role Ecosystem Matrix: 2-cols on mobile, 5-cols on desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-3 mb-6 sm:mb-8">
           {ECOSYSTEM_MEMBERS.map((member) => {
             const isHovered = activeMemberId === member.id;
             return (

@@ -51,24 +51,21 @@ export const Industries: React.FC<IndustriesProps> = ({ onSelectIndustry }) => {
   };
 
   return (
-    <section id="industries" className="py-16 bg-white border-b border-[#e5e7eb]">
+    <section id="industries" className="py-12 sm:py-16 lg:py-20 bg-white border-b border-[#e5e7eb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-5xl mx-auto mb-12">
+        <div className="text-center max-w-5xl mx-auto mb-8 sm:mb-12">
           <div className="pill-token mb-3">
             <Building2 className="w-3.5 h-3.5 text-[#0067b8]" aria-hidden="true" />
             <span>Industries We Serve</span>
           </div>
 
-          <h2
-            className="section-heading-42 font-bold text-[#212529] tracking-tight mb-3"
-            style={{ fontSize: '42px', lineHeight: '52px' }}
-          >
+          <h2 className="section-heading-42 font-bold text-[#212529] tracking-tight mb-3">
             Every Industry Has Unique Challenges.{' '}
-            <span className="text-[#0067b8]">Our Approach Is Never One-Size-Fits-All.</span>
+            <span className="text-[#0067b8] block sm:inline">Our Approach Is Never One-Size-Fits-All.</span>
           </h2>
 
-          <p className="text-[14px] text-[#414141] leading-[21px]">
+          <p className="text-[13.5px] sm:text-[14px] text-[#414141] leading-[21px]">
             From early-stage startups to regulated healthcare and enterprise ecosystems,
             we adapt workflows and staffing to your sector’s compliance and speed expectations.
           </p>

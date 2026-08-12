@@ -65,16 +65,16 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30 backdrop-blur-md transition-opacity"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-md transition-opacity"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
       onClick={handleClose}
     >
       <div
-        className="relative w-full max-w-[440px] rounded-[22px] p-6 sm:p-8 shadow-2xl text-left border border-white/25 overflow-hidden"
+        className="relative w-full max-w-[440px] max-h-[92vh] overflow-y-auto rounded-[18px] sm:rounded-[22px] p-5 sm:p-7 shadow-2xl text-left border border-white/25"
         style={{
-          background: 'rgba(15, 23, 42, 0.20)',
+          background: 'rgba(15, 23, 42, 0.75)',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
         }}

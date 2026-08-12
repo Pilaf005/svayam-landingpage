@@ -14,10 +14,10 @@ export const SvayamLogo: React.FC<SvayamLogoProps> = ({
   className = '',
 }) => {
   const iconSizes = {
-    sm: 'w-6 h-6',
-    md: 'w-8 h-8',
-    lg: 'w-10 h-10',
-    xl: 'w-14 h-14',
+    sm: 'w-[28px] h-[28px]',
+    md: 'w-[40px] h-[40px]',
+    lg: 'w-[48px] h-[48px]',
+    xl: 'w-[56px] h-[56px]',
   };
 
   const textSizes = {

@@ -57,32 +57,32 @@ export const HeroConsultationForm: React.FC = () => {
 
   return (
     <div
-      className="w-full max-w-[420px] rounded-[20px] p-6 sm:p-7 shadow-2xl text-left border border-white/25"
+      className="w-full max-w-full sm:max-w-[420px] rounded-[16px] sm:rounded-[20px] p-5 sm:p-7 shadow-2xl text-left border border-white/25"
       style={{
-        background: 'rgba(15, 23, 42, 0.20)',
+        background: 'rgba(15, 23, 42, 0.35)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
       }}
     >
       {/* Form Header */}
       <h2
-        className="text-[20px] sm:text-[22px] font-bold text-white leading-tight drop-shadow-sm"
+        className="text-[19px] sm:text-[22px] font-bold text-white leading-tight drop-shadow-sm"
         style={{ color: '#ffffff' }}
       >
         Request Expert Consultation
       </h2>
       <p
-        className="text-[13px] text-white/90 font-normal leading-snug mt-1.5 mb-5"
+        className="text-[12.5px] sm:text-[13px] text-white/90 font-normal leading-snug mt-1.5 mb-4 sm:mb-5"
         style={{ color: 'rgba(255, 255, 255, 0.9)' }}
       >
         Fill in your details below to schedule an executive strategy session.
       </p>
 
       {/* Interactive Form */}
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
         {/* Full Name */}
         <div>
-          <label className="block text-[13px] font-medium text-white mb-1.5">
+          <label className="block text-[12.5px] sm:text-[13px] font-medium text-white mb-1">
             Full Name <span className="text-red-400">*</span>
           </label>
           <input
@@ -91,13 +91,13 @@ export const HeroConsultationForm: React.FC = () => {
             value={formData.fullName}
             onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
             placeholder="e.g. Alexander Wright"
-            className="w-full rounded-[8px] bg-white text-slate-900 placeholder:text-slate-400 px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 transition-all shadow-xs"
+            className="w-full rounded-[8px] bg-white text-slate-900 placeholder:text-slate-400 px-3.5 py-3 sm:py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 transition-all shadow-xs"
           />
         </div>
 
         {/* Business Email */}
         <div>
-          <label className="block text-[13px] font-medium text-white mb-1.5">
+          <label className="block text-[12.5px] sm:text-[13px] font-medium text-white mb-1">
             Business Email <span className="text-red-400">*</span>
           </label>
           <input
@@ -106,13 +106,13 @@ export const HeroConsultationForm: React.FC = () => {
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             placeholder="alexander@company.com"
-            className="w-full rounded-[8px] bg-white text-slate-900 placeholder:text-slate-400 px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 transition-all shadow-xs"
+            className="w-full rounded-[8px] bg-white text-slate-900 placeholder:text-slate-400 px-3.5 py-3 sm:py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 transition-all shadow-xs"
           />
         </div>
 
         {/* Phone / WhatsApp */}
         <div>
-          <label className="block text-[13px] font-medium text-white mb-1.5">
+          <label className="block text-[12.5px] sm:text-[13px] font-medium text-white mb-1">
             Phone / WhatsApp <span className="text-red-400">*</span>
           </label>
           <input
@@ -121,20 +121,20 @@ export const HeroConsultationForm: React.FC = () => {
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             placeholder="+44 7000 000000"
-            className="w-full rounded-[8px] bg-white text-slate-900 placeholder:text-slate-400 px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 transition-all shadow-xs"
+            className="w-full rounded-[8px] bg-white text-slate-900 placeholder:text-slate-400 px-3.5 py-3 sm:py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 transition-all shadow-xs"
           />
         </div>
 
         {/* Service Interest Dropdown with Official Svayam Incarnation Offerings */}
         <div>
-          <label className="block text-[13px] font-medium text-white mb-1.5">
+          <label className="block text-[12.5px] sm:text-[13px] font-medium text-white mb-1">
             Service Interest <span className="text-red-400">*</span>
           </label>
           <div className="relative">
             <select
               value={formData.serviceInterest}
               onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
-              className="w-full rounded-[8px] bg-white text-slate-900 px-3.5 py-2.5 text-[14px] pr-10 appearance-none focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 cursor-pointer shadow-xs"
+              className="w-full rounded-[8px] bg-white text-slate-900 px-3.5 py-3 sm:py-2.5 text-[14px] pr-10 appearance-none focus:outline-none focus:ring-2 focus:ring-[#0067b8] border border-slate-200 cursor-pointer shadow-xs"
             >
               <option value="Complete Business Outsourcing (All-in-One)">
                 Complete Business Outsourcing (All-in-One)
@@ -155,7 +155,7 @@ export const HeroConsultationForm: React.FC = () => {
         {/* Submit CTA Button */}
         <button
           type="submit"
-          className="w-full mt-2 py-3 px-4 rounded-[8px] bg-[#0067b8] hover:bg-[#005da6] active:bg-[#004e8c] text-white font-semibold text-[14px] flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer hover:shadow-lg active:scale-[0.99]"
+          className="w-full mt-2 min-h-[48px] py-3 px-4 rounded-[8px] bg-[#0067b8] hover:bg-[#005da6] active:bg-[#004e8c] text-white font-semibold text-[14px] flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer hover:shadow-lg active:scale-[0.99]"
         >
           <Send className="w-4 h-4 fill-white text-white" aria-hidden="true" />
           <span>Request Consultation Now</span>

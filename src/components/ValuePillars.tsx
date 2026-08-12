@@ -11,24 +11,21 @@ import {
 
 export const ValuePillars: React.FC = () => {
   return (
-    <section id="who-we-are" className="py-16 bg-[#f8f9fa] border-b border-[#e5e7eb]">
+    <section id="who-we-are" className="py-12 sm:py-16 lg:py-20 bg-[#f8f9fa] border-b border-[#e5e7eb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-5xl mx-auto text-center mb-12">
+        <div className="max-w-5xl mx-auto text-center mb-8 sm:mb-12">
           <div className="pill-token mb-3">
             <Users className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Who We Are & What We Believe</span>
           </div>
 
-          <h2
-            className="section-heading-42 font-bold text-[#212529] tracking-tight mb-3"
-            style={{ fontSize: '42px', lineHeight: '52px' }}
-          >
+          <h2 className="section-heading-42 font-bold text-[#212529] tracking-tight mb-3">
             Great Businesses Aren’t Built by One Person.{' '}
-            <span className="text-[#0067b8]">They’re Built by the Right Team.</span>
+            <span className="text-[#0067b8] block sm:inline">They’re Built by the Right Team.</span>
           </h2>
 
-          <p className="text-[14px] text-[#414141] leading-[21px]">
+          <p className="text-[13.5px] sm:text-[14px] text-[#414141] leading-[21px]">
             Every successful enterprise relies on specialized talent across systems, operations, marketing,
             and compliance working in synchronization.
           </p>

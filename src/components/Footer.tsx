@@ -9,16 +9,16 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
   return (
-    <footer className="bg-white text-[#131313] pt-14 pb-10 border-t border-[#e5e7eb]">
+    <footer className="bg-white text-[#131313] py-6 sm:py-8 lg:pt-14 lg:pb-10 border-t border-[#e5e7eb]">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Grid: Exact 5-Column Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 pb-10">
+        {/* Main Grid: Visible on Desktop & Tablet, Hidden on Mobile */}
+        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 pb-8 sm:pb-10">
           
           {/* Columns 1, 2, 3: Business, Community, Company */}
           {FOOTER_SECTIONS.map((section, idx) => (
-            <div key={idx} className="space-y-4">
-              <h4 className="text-[14px] font-semibold text-[#131313] tracking-wide">
+            <div key={idx} className="space-y-3 sm:space-y-4">
+              <h4 className="text-[13.5px] sm:text-[14px] font-semibold text-[#131313] tracking-wide">
                 {section.title}
               </h4>
               <ul className="space-y-[7px]" aria-label={section.title}>
@@ -37,12 +37,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           ))}
 
           {/* Column 4: London, UK Office */}
-          <div className="space-y-4">
-            <h4 className="text-[14px] font-semibold text-[#131313] tracking-wide">
+          <div className="col-span-2 sm:col-span-1 space-y-3 sm:space-y-4">
+            <h4 className="text-[13.5px] sm:text-[14px] font-semibold text-[#131313] tracking-wide">
               London, UK
             </h4>
             <div className="text-[12px] space-y-[4px]">
-              <div className="font-semibold text-[#131313] mb-[6px]">Svayam Incarnation Ltd.</div>
+              <div className="font-semibold text-[#131313] mb-[4px] sm:mb-[6px]">Svayam Incarnation Ltd.</div>
               <div className="text-[#131313]">
                 Call : <a href="tel:+447425114220" className="text-[#0067b8] hover:underline">+44 742511 4220</a>
               </div>
@@ -56,12 +56,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           </div>
 
           {/* Column 5: Gurugram, India Office */}
-          <div className="space-y-4">
-            <h4 className="text-[14px] font-semibold text-[#131313] tracking-wide">
+          <div className="col-span-2 sm:col-span-1 space-y-3 sm:space-y-4">
+            <h4 className="text-[13.5px] sm:text-[14px] font-semibold text-[#131313] tracking-wide">
               Gurugram, India
             </h4>
             <div className="text-[12px] space-y-[4px]">
-              <div className="font-semibold text-[#131313] mb-[6px]">Svayam Incarnation Pvt. Ltd.</div>
+              <div className="font-semibold text-[#131313] mb-[4px] sm:mb-[6px]">Svayam Incarnation Pvt. Ltd.</div>
               <div className="text-[#131313]">
                 Call : <a href="tel:+918818000205" className="text-[#0067b8] hover:underline">+91 88 18000 205</a>
               </div>
@@ -77,7 +77,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
         </div>
 
         {/* Bottom Utility, Copyright & Social Icons Row */}
-        <div className="pt-6 border-t border-[#e5e7eb] flex flex-col items-center gap-2">
+        <div className="pt-0 md:pt-6 border-t-0 md:border-t border-[#e5e7eb] flex flex-col items-center gap-2">
           
           {/* Centered Legal Links */}
           <div className="flex items-center justify-center gap-3 text-[11px] text-[#888888] font-normal">
